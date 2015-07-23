@@ -42,6 +42,6 @@ class Solution:
                         k_equal_lines[kij] += 1 
             for key in k_equal_lines:
                 max_num = max(max_num, k_equal_lines[key] + repeat_node)
-            k_equal_lines = {}
+            k_equal_lines.clear()
         return max_num           
         
