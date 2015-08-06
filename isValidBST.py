@@ -47,14 +47,10 @@ class Solution:
                 p = p.left
             while(len(st) > 0):
                 top = st.pop()
+                if len(inorder) > 0 and top.val <= inorder[-1]:
+                    return False
                 inorder.append(top.val)
                 if top.right :
                     p = top.right
                     break
-        n = len(inorder)
-        if n <= 1:
-            return True
-        for i in range(1,n):
-            if inorder[i-1] >= inorder[i]:
-                return False
         return True
