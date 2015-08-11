@@ -1,5 +1,8 @@
 class Solution:
-	def twoSum(self, nums, target):
+    # @param {integer[]} nums
+    # @param {integer} target
+    # @return {integer[]}
+    def twoSum(self, nums, target):
         n = len(nums)
         dict = {}
         for i in xrange(n):
@@ -8,3 +11,4 @@ class Solution:
                 return [dict[t]+1,i+1]
             dict[nums[i]] = i
         return []
+                    
